@@ -2,18 +2,43 @@
 <html lang="ru">
 <head>
 
-  @@include("source/html/base/head.html")
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Тестовое задание Большой Лиги">
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Тестовое задание Большой Лиги">
+<meta name="application-name" content="Тестовое задание Большой Лиги">
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#1f1f1f">
+
+<link rel="preload" href="fonts/neuemachina-regular.woff2" as="font" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/style.min.css">
+
   <title>Большая Лига</title>
 
 </head>
 <body>
 
   <div style="display: none;">
-    @@include("build/img/sprite_auto.svg")
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol></svg>
   </div>
 
   <div class="wrapper">
-    @@include("source/html/base/header.html")
+    <header class="header ">
+  <div class="header__wrapper">
+    <a class="header__logo"  href="index.html" aria-label="Переход на главную">
+      <img class="header__image" src="img/svg/logo.svg" alt="Логотип Лиги А" width="192" height="24">
+    </a>
+  </div>
+</header>
+
     <div class="loader">
       <div class="loader__logo">
         <svg width="801" height="100" viewBox="0 0 801 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +133,8 @@
       </div>
     </main>
 
-    @@include("source/html/base/footer.html")
+    <footer class="footer"></footer>
+
   </div>
 
   <script src="js/vendor.min.js"></script>

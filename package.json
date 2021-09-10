@@ -1,9 +1,7 @@
 {
   "private": true,
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "last 2 versions"
   ],
   "scripts": {
     "editorconfig": "editorconfig-cli",

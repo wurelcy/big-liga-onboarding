@@ -33,7 +33,7 @@ const css = () => {
       .pipe(sourcemap.init())
       .pipe(sass())
       .pipe(postcss([autoprefixer({
-        grid: true,
+        grid: false,
       })]))
       .pipe(gulp.dest('build/css'))
       .pipe(csso())

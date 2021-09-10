@@ -1,0 +1,139 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50px;
+    left: 50%;
+    width: 664px;
+    height: 651px;
+    transform: translateX(-50%);
+    background-image: url("../img/svg/bg.svg");
+
+    @include viewport--md {
+      display: none;
+    }
+  }
+}
+
+.intro__title {
+  margin: 0;
+  margin-right: 40px;
+  padding-top: 118px;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 400;
+  color: $color-neon-blue;
+  max-width: 562px;
+
+  @include viewport--md {
+    padding-top: 246px;
+    padding-left: 35px;
+    max-width: 640px;
+  }
+}
+
+.intro__description {
+  width: 352px;
+  margin: 0;
+  margin-top: 35px;
+  font-size: 30px;
+  line-height: 40px;
+
+  @include viewport--md {
+    color: $color-default-white;
+  }
+}
+
+.intro__animate {
+  .red-lightning {
+    animation: slideToTop 0.4s ease-out both;
+  }
+
+  .purple-lightning {
+    animation: slideToTop 0.4s ease-out 0.2s both;
+  }
+
+  .roar {
+    animation: appear 0.6s ease-in-out 0.4s infinite alternate both;
+  }
+
+  .blue-lightning {
+    animation: slideToTop 0.4s ease-out 0.1s both;
+  }
+
+  .intro__title {
+    animation: slideToTop 0.4s ease-out both;
+  }
+
+  .intro__description {
+    animation: slideToTop 0.4s ease-out both;
+  }
+
+  .flag,
+  .purple-lightning,
+  .red-lightning,
+  .blue-lightning,
+  .roar,
+  .intro__description {
+    @include viewport--md {
+      animation: none;
+    }
+  }
+}
+
+.intro__block {
+  .flag,
+  .blue-lightning,
+  .roar {
+    fill: $color-neon-blue;
+  }
+
+  .purple-lightning {
+    fill: $color-vivid-violet;
+  }
+
+  .red-lightning {
+    fill: $color-torch-red;
+  }
+
+  @include viewport--md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -768px;
+    min-height: 100vh;
+    padding-top: 161px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $color-neon-blue;
+    transition: left $default-transition-settings,
+      visibility $default-transition-settings,
+      opacity $default-transition-settings;
+
+    .flag,
+    .purple-lightning,
+    .red-lightning,
+    .blue-lightning,
+    .roar {
+      fill: $color-default-white;
+    }
+
+    &--show {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      transition: left $default-transition-settings,
+        visibility $default-transition-settings,
+        opacity $default-transition-settings;
+    }
+  }
+}
